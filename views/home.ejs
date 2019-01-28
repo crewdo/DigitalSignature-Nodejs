@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Send message</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <style>
+        .card {
+            margin-top: 20px;
+        }
+
+        .card-header {
+            background: #5bf0ff;
+        }
+
+        .card-footer pre {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <b>Send a message</b>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="publickey">Publickey</label>
+                        <textarea class="form-control" id="publickey" name="publickey" rows="13"><%= public %></textarea>
+<hr>
+                        <label for="message">Input your text:</label>
+                        <input type="text" class="form-control" id="message" name="message">
+                        <hr>
+
+                        <button id ="generateSign">Generate Signature</button>
+                        <hr>
+
+                        <label for="signature">Auto generated signature</label>
+                        <input type="text" class="form-control" id="signature" name="signature">
+
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="/check">Go to checking the message</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="/js/ajax.js"></script>
+</html>
